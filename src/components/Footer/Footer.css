@@ -1,0 +1,51 @@
+.footer {
+  position: relative;
+  background: url('/sfondotop.jpg') center/cover no-repeat;
+  background-size: cover;
+  /* assicura che l'immagine riempia tutto il footer */
+  color: #fde61e;
+  /* giallo brillante tipico del tema */
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 2px solid #e6413b;
+  /* piccolo dettaglio rosso */
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  /* impedisce che overlay esca dal footer */
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* overlay scuro per contrasto testo */
+  z-index: 0;
+}
+
+.footer p,
+.footer a {
+  position: relative;
+  z-index: 1;
+  /* testo sopra overlay */
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #fde61e;
+  /* giallo brillante */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #e6413b;
+  /* rosso acceso al passaggio */
+  text-decoration: underline;
+}

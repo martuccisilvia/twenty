@@ -1,4 +1,4 @@
-const albums = [
+export const albums = [
   {
     title: "Regional at Best",
     year: 2011,

@@ -1,13 +1,13 @@
-// App.jsx
 import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import "./style.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import AlbumList from "./components/AlbumList";
-import Footer from "./components/Footer";
-import Contacts from "./components/Contacts";
-import albums from "./data/albums.js";
+
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import AlbumList from "./components/AlbumList/AlbumList";
+import Footer from "./components/Footer/Footer";
+import Contacts from "./components/Contacts/Contacts";
+
+import albums from "./data/album.js";
 
 
 

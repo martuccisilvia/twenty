@@ -1,0 +1,71 @@
+
+.contacts-page {
+  max-width: 600px;
+  margin: 100px auto 50px;
+  /* margine top per navbar fissa */
+  padding: 20px;
+  background: #202020;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fde61e;
+  text-align: center;
+}
+
+.contacts-page h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fde61e;
+}
+
+.contacts-page p {
+  margin-bottom: 20px;
+  color: #d2cfbd;
+}
+
+.contacts-form label {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #fde61e;
+  font-weight: bold;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #333;
+  color: #fde61e;
+  font-family: 'Arial', sans-serif;
+}
+
+.contacts-form input:focus,
+.contacts-form textarea:focus {
+  outline: 2px solid #e6413b;
+}
+
+.contacts-form button {
+  background-color: #e6413b;
+  color: #fde61e;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contacts-form button:hover {
+  background-color: #873132;
+}
+
+
+.form-success {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #1db954;
+  /* verde conferma */
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import "./AlbumCard.css";
 
 function AlbumCard({ album, openModal }) {
   return (

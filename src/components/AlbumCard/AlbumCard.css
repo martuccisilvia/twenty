@@ -1,0 +1,196 @@
+.album-card {
+  background: #202020;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.5s;
+  opacity: 0;
+}
+
+.album-card.show {
+  opacity: 1;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.album-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.album-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fde61e;
+  /* giallo brillante */
+  text-shadow: 1px 1px 5px black;
+}
+
+/* PULSANTI CARD */
+.album-btn {
+  background-color: #e6413b;
+  /* rosso acceso */
+  color: #fde61e;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.album-btn:hover {
+  background-color: #873132;
+  /* rosso scuro */
+}
+
+/* PULSANTE PLAYLIST */
+.show-playlist-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #e6413b;
+  color: #fde61e;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.show-playlist-btn:hover {
+  background-color: #873132;
+}
+
+/* PLAYLIST SECTION */
+.playlist-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #202020;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  color: #d2cfbd;
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.remove-btn {
+  background: #e6413b;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.remove-btn:hover {
+  background: #ff0000;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #202020;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  color: #d2cfbd;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #e6413b;
+  color: #fde61e;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #873132;
+}
+
+/* SONG BUTTONS */
+.songs-modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.song-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e6413b;
+  color: #fde61e;
+  transition: background 0.2s;
+}
+
+.song-btn:hover {
+  background: #873132;
+}
+
+.song-btn.added {
+  background: #fde61e;
+  color: #202020;
+  font-weight: bold;
+}
+
+/* BANNER */
+.banner {
+  position: fixed;
+  top: 70px;
+  /* sotto navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e6413b;
+  color: #fde61e;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  z-index: 2000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInOut 2s forwards;
+}

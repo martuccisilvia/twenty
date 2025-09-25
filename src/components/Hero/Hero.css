@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  background: url('/resources/sfondotop.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #fde61e;
+  /* giallo brillante */
+}
+
+.hero-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d2cfbd;
+  /* beige chiaro per contrasto */
+}

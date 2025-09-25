@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
-import AlbumCard from "./AlbumCard";
+import React, { useState, useEffect, useRef } from "react";
+import AlbumCard from "../AlbumCard/AlbumCard";
+import "./AlbumList.css";
 
 function AlbumList({ albums, playlist, setPlaylist, addToPlaylist }) {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
