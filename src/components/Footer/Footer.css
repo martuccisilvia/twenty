@@ -2,17 +2,13 @@
   position: relative;
   background: url('/sfondotop.jpg') center/cover no-repeat;
   background-size: cover;
-  /* assicura che l'immagine riempia tutto il footer */
   color: #fde61e;
-  /* giallo brillante tipico del tema */
   text-align: center;
   padding: 40px 20px;
   margin-top: 40px;
   border-top: 2px solid #e6413b;
-  /* piccolo dettaglio rosso */
   font-family: 'Arial', sans-serif;
   overflow: hidden;
-  /* impedisce che overlay esca dal footer */
 }
 
 .footer::before {
