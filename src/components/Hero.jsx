@@ -5,7 +5,7 @@ function Hero() {
     <section
       className="hero"
       style={{
-        backgroundImage: "url('/resources/sfondotop.jpg')",
+        backgroundImage: "url('/resources/sfondotop1.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
