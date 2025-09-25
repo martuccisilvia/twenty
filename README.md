@@ -1,16 +1,47 @@
-# React + Vite
+# 🎵 Twenty One Pilots Playlist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un’applicazione frontend realizzata con **React + Vite**, che mostra una playlist dedicata ai **Twenty One Pilots**.  
+Il progetto nasce come esercizio pratico per consolidare le competenze in React, gestione dei componenti, routing e organizzazione di un’applicazione web moderna.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Descrizione
 
-## React Compiler
+Questa applicazione permette di esplorare una playlist dei Twenty One Pilots, mostrando le tracce principali con copertina, titolo, album e altre informazioni.  
+L’obiettivo principale è creare un’interfaccia semplice, responsive e intuitiva, sfruttando le potenzialità di React e la velocità di Vite come build tool.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Funzionalità principali:  
+- Visualizzazione della lista di brani  
+- Possibilità di cliccare su ogni brano e aggiungerlo alla tua playlist
+- Interfaccia pulita e responsive  
+- Possibile estensione futura con player audio o integrazione API  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## demo
+
+![Screenshot della playlist](resources/demo.png)
+
+
+
+
+---
+
+## 🛠️ Tecnologie utilizzate
+
+- **React**: libreria principale per costruire componenti e gestire lo stato  
+- **Vite**: build tool leggero e veloce per progetti React  
+- **JavaScript / JSX**: per la logica e il rendering dei componenti  
+- **CSS**: styling delle componenti  
+- Eventuali librerie aggiuntive (es. React Router, React Icons, librerie per API musicali)
+
+---
+
+## ⚙️ Installazione e avvio
+
+Per eseguire il progetto in locale, segui questi passaggi:
+
+1. **Clona la repository**:  
+   ```bash
+   git clone https://github.com/martuccisilvia/twenty.git
