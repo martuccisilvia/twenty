@@ -1,50 +1,40 @@
+/* Footer */
 .footer {
-  position: fixed;
   background: url('/sfondotop.jpg') center/cover no-repeat;
   background-size: cover;
   color: #fde61e;
   text-align: center;
   padding: 40px 20px;
-  margin-top: 40px;
   border-top: 2px solid #e6413b;
   font-family: 'Arial', sans-serif;
-  overflow: hidden;
-  max-height: 7vh;
-  height: 300px;
+  position: relative;
 }
-
 
 .footer::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   z-index: 0;
-} 
-
+}
 
 .footer p,
 .footer a {
   position: relative;
   z-index: 1;
-  /* testo sopra overlay */
   margin: 5px 0;
-}
-
-.footer a {
-  color: #fde61e;
-  /* giallo brillante */
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 5px;
-  transition: color 0.2s;
+   color:#fde61e
 }
 
 .footer a:hover {
   color: #e6413b;
-  /* rosso acceso al passaggio */
   text-decoration: underline;
+}
+
+.footer p {
+  animation: fadeInUp 1s ease forwards;
+  color:#fde61e
 }

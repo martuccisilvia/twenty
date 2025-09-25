@@ -1,9 +1,10 @@
 .contacts-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* in alto, non al centro */
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  align-items: center;
+  padding: 44px;
+background: url('/concertotop.jpg') center/cover no-repeat;
+min-height: 70vh;
 }
 
 .contacts-page {
@@ -41,7 +42,7 @@
 .contacts-form input,
 .contacts-form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 7px;
   margin-top: 5px;
   border-radius: 12px;
   border: none;
@@ -110,4 +111,37 @@ textarea {
   .contacts-form button {
     width: 100%; /* pulsante full-width su mobile */
   }
+}
+.contacts-social {
+  margin-top: 30px;
+  padding: 20px;
+  background: #2a2a2a;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.contacts-social p {
+  margin-bottom: 15px;
+  color: #fde61e;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #fde61e;
+  color: #202020;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.social-links a:hover {
+  background-color: #e6413b;
+  color: #fde61e;
+  transform: scale(1.1);
 }
