@@ -2,34 +2,37 @@ import "./Contacts.css";
 
 const Contacts = () => {
     return (
-        <div className="contacts-page">
-            <h2>Contattami</h2>
-            <p>Compila il form qui sotto per inviarmi un messaggio:</p>
 
-            <form
-                action="https://formspree.io/f/xwpqlnqn"
-                method="POST"
-                className="contacts-form"
-            >
-                <label>
-                    Nome:
-                    <input type="text" name="name" required />
-                </label>
+        <div className="contacts-container"> 
+            
+            <div className="contacts-page">
+                <h2>Contact Us</h2>
+                <p>Fill out the form below to send me a message:</p>
 
-                <label>
-                    Email:
-                    <input type="email" name="email" required />
-                </label>
+                <form
+                    action="https://formspree.io/f/xwpqlnqn"
+                    method="POST"
+                    className="contacts-form"
+                >
+                    <label>
+                        Name:
+                        <input type="text" name="name" required />
+                    </label>
 
-                <label>
-                    Messaggio:
-                    <textarea name="message" rows="5" required></textarea>
-                </label>
+                    <label>
+                        Email:
+                        <input type="email" name="email" required />
+                    </label>
 
-                <button type="submit">Invia</button>
-            </form>
-        </div>
-    );
+                    <label>
+                        Message:
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>);
 };
 
 export default Contacts;

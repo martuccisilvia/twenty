@@ -1,5 +1,5 @@
 .footer {
-  position: relative;
+  position: fixed;
   background: url('/sfondotop.jpg') center/cover no-repeat;
   background-size: cover;
   color: #fde61e;
@@ -9,19 +9,22 @@
   border-top: 2px solid #e6413b;
   font-family: 'Arial', sans-serif;
   overflow: hidden;
+  max-height: 7vh;
+  height: 300px;
 }
+
 
 .footer::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* overlay scuro per contrasto testo */
   z-index: 0;
-}
+} 
+
 
 .footer p,
 .footer a {
