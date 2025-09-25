@@ -5,7 +5,7 @@ import Hero from "./components/Hero/Hero";
 import AlbumList from "./components/AlbumList/AlbumList";
 import Footer from "./components/Footer/Footer";
 import Contacts from "./components/Contacts/Contacts";
-import albums from "./data/album.js";
+import albums from "./data/albums.js";
 
 function App() {
   const [playlist, setPlaylist] = useState(() => {
@@ -33,6 +33,7 @@ function App() {
     });
   };
 
+  // filtro album + canzoni
   const filteredAlbums = albums
     .map((album) => {
       const filteredSongs = album.songs.filter((song) =>
@@ -56,9 +57,10 @@ function App() {
   return (
     <Router>
       <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
       {showBanner && <div className="banner">{bannerText}</div>}
 
-      {/* wrapper per occupare lo spazio centrale */}
+      {/* Contenitore principale per flex-grow */}
       <div className="main-content">
         <Routes>
           <Route
@@ -72,14 +74,45 @@ function App() {
                   setPlaylist={setPlaylist}
                   addToPlaylist={addToPlaylist}
                 />
+                <section className="playlist-section" id="playlist">
+                  <h2>Your Playlist</h2>
+                  {playlist.length === 0 ? (
+                    <p>No songs added</p>
+                  ) : (
+                    <ul>
+                      {playlist.map((song, i) => (
+                        <li key={i} className="playlist-item">
+                          {song}
+                          <button
+                            className="remove-btn"
+                            onClick={() =>
+                              setPlaylist((prev) =>
+                                prev.filter((s) => s !== song)
+                              )
+                            }
+                          >
+                            ×
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
               </>
             }
           />
-          <Route path="/contacts" element={<Contacts />} />
+
+          <Route
+            path="/contacts"
+            element={
+              <>
+                <Contacts />
+              </>
+            }
+          />
         </Routes>
       </div>
 
-      {/* Footer globale */}
       <Footer />
     </Router>
   );

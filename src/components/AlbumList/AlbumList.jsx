@@ -23,6 +23,10 @@ function AlbumList({ albums, playlist, setPlaylist, addToPlaylist }) {
   const openModal = (album) => setSelectedAlbum(album);
   const closeModal = () => setSelectedAlbum(null);
 
+  const handleAddSong = (song) => {
+    addToPlaylist(song); // chiama la funzione da App.jsx
+  };
+
   return (
     <>
       <section id="listen">
@@ -34,8 +38,8 @@ function AlbumList({ albums, playlist, setPlaylist, addToPlaylist }) {
       </section>
 
       {selectedAlbum && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-btn" onClick={closeModal}>×</button>
             <h2>{selectedAlbum.title} ({selectedAlbum.year})</h2>
             <ul className="songs-modal-list">
@@ -43,7 +47,7 @@ function AlbumList({ albums, playlist, setPlaylist, addToPlaylist }) {
                 <li key={i}>
                   <button
                     className={`song-btn ${playlist.includes(song) ? "added" : ""}`}
-                    onClick={() => addToPlaylist(song)}
+                    onClick={() => handleAddSong(song)}
                   >
                     {song}
                   </button>
