@@ -19,15 +19,6 @@ Funzionalità principali:
 
 ---
 
-## demo
-
-![Screenshot della playlist](resources/demo.png)
-
-
-
-
----
-
 ## 🛠️ Tecnologie utilizzate
 
 - **React**: libreria principale per costruire componenti e gestire lo stato  
