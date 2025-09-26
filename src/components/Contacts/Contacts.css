@@ -109,7 +109,7 @@ textarea {
   }
 
   .contacts-form button {
-    width: 100%; /* pulsante full-width su mobile */
+    width: 100%; 
   }
 }
 .contacts-social {

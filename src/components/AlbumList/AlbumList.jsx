@@ -24,7 +24,7 @@ function AlbumList({ albums, playlist, setPlaylist, addToPlaylist }) {
   const closeModal = () => setSelectedAlbum(null);
 
   const handleAddSong = (song) => {
-    addToPlaylist(song); // chiama la funzione da App.jsx
+    addToPlaylist(song); 
   };
 
   return (
