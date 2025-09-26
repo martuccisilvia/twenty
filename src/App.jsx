@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import AlbumList from "./components/AlbumList/AlbumList";
-import Footer from "./components/Footer/Footer";
-import Contacts from "./components/Contacts/Contacts";
+import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home/Home";
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import albums from "./data/albums.js";
 
 function App() {
@@ -36,14 +34,9 @@ function App() {
   // filtro album + canzoni
   const filteredAlbums = albums
     .map((album) => {
-      const filteredSongs = album.songs.filter((song) =>
-        song.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      const filteredSongs = album.songs.filter((song) => song.toLowerCase().includes(searchTerm.toLowerCase()));
 
-      if (
-        album.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        filteredSongs.length > 0
-      ) {
+      if (album.title.toLowerCase().includes(searchTerm.toLowerCase()) || filteredSongs.length > 0) {
         return {
           ...album,
           songs: filteredSongs.length > 0 ? filteredSongs : album.songs,
@@ -56,64 +49,12 @@ function App() {
 
   return (
     <Router>
-      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-
-      {showBanner && <div className="banner">{bannerText}</div>}
-
-      {/* Contenitore principale per flex-grow */}
-      <div className="main-content">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <AlbumList
-                  albums={filteredAlbums}
-                  playlist={playlist}
-                  setPlaylist={setPlaylist}
-                  addToPlaylist={addToPlaylist}
-                />
-                <section className="playlist-section" id="playlist">
-                  <h2>Your Playlist</h2>
-                  {playlist.length === 0 ? (
-                    <p>No songs added</p>
-                  ) : (
-                    <ul>
-                      {playlist.map((song, i) => (
-                        <li key={i} className="playlist-item">
-                          {song}
-                          <button
-                            className="remove-btn"
-                            onClick={() =>
-                              setPlaylist((prev) =>
-                                prev.filter((s) => s !== song)
-                              )
-                            }
-                          >
-                            ×
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </section>
-              </>
-            }
-          />
-
-          <Route
-            path="/contacts"
-            element={
-              <>
-                <Contacts />
-              </>
-            }
-          />
-        </Routes>
-      </div>
-
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout searchTerm={searchTerm} setSearchTerm={setSearchTerm} showBanner={showBanner} bannerText={bannerText} />}>
+          <Route index element={<Home filteredAlbums={filteredAlbums} playlist={playlist} setPlaylist={setPlaylist} addToPlaylist={addToPlaylist} />} />
+          <Route path="contacts" element={<ContactsPage />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
