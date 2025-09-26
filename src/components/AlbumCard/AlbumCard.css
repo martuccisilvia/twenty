@@ -6,20 +6,30 @@
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s, opacity 0.5s;
   opacity: 0;
+  width: 375px;
+  height: 375px;
 }
 
 .album-card.show {
   opacity: 1;
+   border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+
 }
 
 .album-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
+.album-card img {
+  width: 10%;
+  height: 250px;    
+  object-fit: cover;
+}
 
 .album-card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 30px;
   margin-bottom: 10px;
 }
 
@@ -49,7 +59,6 @@
   /* rosso scuro */
 }
 
-/* PULSANTE PLAYLIST */
 .show-playlist-btn {
   display: block;
   margin: 20px auto;
@@ -67,7 +76,6 @@
   background-color: #873132;
 }
 
-/* PLAYLIST SECTION */
 .playlist-section {
   max-width: 800px;
   margin: 20px auto;
@@ -104,7 +112,6 @@
   background: #ff0000;
 }
 
-/* MODAL */
 .modal {
   position: fixed;
   top: 0;

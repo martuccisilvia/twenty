@@ -60,7 +60,6 @@ function App() {
 
       {showBanner && <div className="banner">{bannerText}</div>}
 
-      {/* Contenitore principale per flex-grow */}
       <div className="main-content">
         <Routes>
           <Route

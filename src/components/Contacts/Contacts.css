@@ -97,9 +97,9 @@ textarea {
 }
 @media (max-width: 768px) {
   .contacts-page {
-    margin: 80px 10px 50px; /* più spazio ai lati */
+    margin: 80px 10px 50px; 
     padding: 15px;
-    max-width: 95%; /* usa quasi tutta la larghezza */
+    max-width: 95%; 
   }
 
   .contacts-form input,
@@ -109,7 +109,7 @@ textarea {
   }
 
   .contacts-form button {
-    width: 100%; /* pulsante full-width su mobile */
+    width: 100%; 
   }
 }
 .contacts-social {
