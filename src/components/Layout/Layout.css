@@ -1,0 +1,28 @@
+/* Layout styles can be added here if needed */
+.main-content {
+  flex: 1;
+  /* min-height: calc(100vh - 60px); */
+}
+
+.banner {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
