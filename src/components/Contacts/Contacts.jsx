@@ -31,7 +31,7 @@ const Contacts = () => {
         </form>
 
         <div className="contacts-social">
-          <p>Or you can also find me on social media:</p>
+          <p>you can also find us on social media:</p>
           <div className="social-links">
             <a href="https://store.twentyonepilots.com/" target="_blank" rel="noopener noreferrer">Store</a>
             <a href="https://www.instagram.com/twentyonepilots?igsh=MXBhdjZ0MnR3eno1OQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
